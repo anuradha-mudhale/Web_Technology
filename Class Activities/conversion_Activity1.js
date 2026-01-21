@@ -1,3 +1,24 @@
+let num1 = 10;            // Number
+let name = "Anuradha";  // String
+let isStudent = true;   // Boolean
+let x;                  // Undefined
+let y = null;           // Null
+let arr = [1, 2, 3];    // Object (Array)
+let person = { name: "A", age: 20 }; // Object
+
+console.log(typeof num1);        // number
+console.log(typeof name);       // string
+console.log(typeof isStudent);  // boolean
+console.log(typeof x);          // undefined
+console.log(typeof y);          // object (JavaScript quirk)
+console.log(typeof arr);        // object
+console.log(typeof person);     // object
+
+
+//null and undefined are same but typeof null is object and typeof undefined is undefined
+
+
+
 //String to Number
 
 let str = "Anuradha";
@@ -7,6 +28,9 @@ console.log("before conversion:")
 console.log(typeof(str))
 console.log("After Conversion:")
 console.log(typeof(num))
+
+
+
 
 //Number to String
 console.log("Number to String Conversion")

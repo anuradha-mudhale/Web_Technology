@@ -58,3 +58,128 @@ and write code . it open vs code
 2.Conversion Operators
 
 
+-----------------------------------------------------------------------------Concepts--------------------------------------------------------------------------1️⃣ What what is Web Technology?
+
+Web Technology refers to the collection of tools, programming languages, frameworks, and protocols used to design, develop, and run websites and web applications on the internet. It includes frontend technologies, backend technologies, databases, and servers that work together to deliver content to users.
+
+2️⃣ Real-time Examples of Web Technology
+
+Amazon – Online shopping and payment system
+
+Google – Search engine and web services
+
+Gmail – Web-based email application
+
+Netflix – Online video streaming platform
+
+Online Banking Websites – Money transfer and account management
+
+These applications use web technology to provide real-time services over the internet.
+
+3️⃣ What is JavaScript?
+
+JavaScript is a scripting and object oriented programming language used to create interactive and dynamic web pages. It allows developers to handle user actions, validate forms, manipulate the DOM, and update web content without reloading the page.
+
+4️⃣ Which file extension is used for JavaScript?
+
+The file extension used for JavaScript is:
+
+.js
+
+Example:
+
+script.js
+
+5️⃣ Why do we use Node.js?
+
+Node.js is used to run JavaScript code outside the browser. It allows JavaScript to be used on the server side for building backend applications, handling client requests, accessing databases, and creating fast and scalable web applications.
+
+6️⃣ Difference between package.json and package-lock.json
+package.json
+
+Contains project metadata and dependencies
+
+Specifies dependency version ranges
+
+Managed by the developer
+
+package-lock.json
+
+Automatically generated file
+
+Stores exact versions of installed packages
+
+Ensures consistency across different systems
+
+7️⃣ What is Node.js?
+
+Node.js is a JavaScript runtime environment built on Chrome’s V8 engine. It allows developers to execute JavaScript code outside the browser and is mainly used for backend development.
+
+8️⃣ Types of Data Types in JavaScript
+Primitive Data Types
+
+Number
+
+String
+
+Boolean
+
+Undefined
+
+Null
+
+Symbol
+
+BigInt
+
+Non-Primitive Data Types
+
+Object (arrays, functions, objects)
+
+9️⃣ Difference between var, let, and const
+
+var: Function scoped, can be redeclared and reassigned, may cause scope-related bugs
+
+let: Block scoped, can be reassigned, cannot be redeclared
+
+const: Block scoped, cannot be reassigned or redeclared
+
+🔟 Difference between == and ===
+
+== compares only values
+
+=== compares both value and data type
+
+Example:
+
+5 == "5"   // true
+5 === "5"  // false
+
+1️⃣1️⃣ How to run JavaScript using Node.js?
+
+Check version:
+
+node --version
+
+
+Run file:
+
+node file_name.js
+
+
+Key Concepts Summary
+
++true → converts boolean to number (1)
+
++"" → converts empty string to number (0)
+
+variable++ → post-increment (increment after use)
+
+++variable → pre-increment (increment before use)
+
+✅ Exam-ready conclusion
+
+The unary plus operator converts values into numbers. Post-increment increases the value after usage, while pre-increment increases the value before usage.
+
+What is DOM
+DOM is a programming interface that represents a web page as a tree of objects, allowing scripts to access and manipulate HTML elements dynamically.
