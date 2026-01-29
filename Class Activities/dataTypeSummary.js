@@ -33,3 +33,27 @@ function display(){
 }
 const myFunction = display;
 console.log(myFunction);
+
+//memory there are two type ->1]stack 2]heap
+//stack used for primitive datatype
+//heap used for non-primiive datatype
+
+let MyYoutubename = "SJT"
+let newMyYouTubename = MyYoutubename
+console.log(newMyYouTubename) //stack memory is used for primitive datatype like string boolean number copy of value is given
+newMyYouTubename = "ABC"; //when we assign one variable to another a copy i made so changing one does not affect to others
+console.log(newMyYouTubename)
+
+//used for non-primitive datatypes object functions array reference is given
+let user1 = {
+    "fname":"Anu",
+    "age":20,
+    "id":7
+}
+
+let user2 = user1;
+user2.id = 4;
+console.log(user1.id) //objects are stored in heap memory when we assign one obj to another variable reference is copied not the value 
+                      // if we change one both variable see the changes
+console.log(user2.id)
+
