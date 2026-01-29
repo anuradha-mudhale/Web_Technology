@@ -49,10 +49,10 @@ if(marks>=35)
 console.log("Acivity No4")
 console.log("Q4.Display Numbers")
 console.log("Numbers")
-for(let i=1;i<=100;i++)
+for(let i=1;i<=5;i++)
 {
     console.log(i)
-    document.writeln("<br>",i)
+    document.writeln("<br>",i+"<br>")
 }
 
 //Activity No5..//
