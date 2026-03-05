@@ -1,30 +1,99 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Document</title>
-    </head>
-    <body>
-        <h1>Registration Form</h1>
-        <form>
-            Name:
-            <input type='text' id='name'/>
-            <span id='nameError'></span>
-            <br></br>
+<head>
+    <title>Registration Form</title>
 
-            Email:
-            <input type='Email' id='email'/>
-            <span id='emailError'></span>
-            <br></br>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
-            Password:
-            <input type='password' id='password'/>
-            <span id='passwordError'></span>
-            <br></br>
+        .container{
+            width: 350px;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+        }
 
-            <input type='button' value="Submit" onclick="SubmitButtonClick()">
+        h1{
+            text-align: center;
+            color: rgb(27, 102, 231);
+            margin-bottom: 20px;
+        }
+
+        label{
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"]{
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"]{
+            width: 100%;
+            padding: 10px;
+            background-color: rgb(27, 102, 231);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        input[type="submit"]:hover{
+            background-color: rgb(20, 80, 180);
+        }
+
+        .error{
+            color: red;
+            font-size: 13px;
+        }
+
+        #successMsg{
+            text-align: center;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <form onsubmit="return SubmitButtonClick(event)">
+            <h1>Registration Form</h1>
+
+            <label>Name:</label>
+            <input type="text" id="name">
+            <span id="nameError" class="error"></span><br></br>
+
+            <label>Email:</label>
+            <input type="email" id="email">
+            <span id="emailError" class="error"></span><br></br>
+
+            <label>Password:</label>
+            <input type="password" id="password">
+            <span id="passwordError" class="error"></span><br></br>
+
+            <input type="submit" value="Submit">
+
+            <p id="successMsg"></p>
         </form>
+    </div>
 
-        
-        <script src="Exp04.js"></script>
-    </body>
+<script src="Exp04.js"></script>
+
+</body>
 </html>
