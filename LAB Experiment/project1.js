@@ -35,3 +35,8 @@ document.getElementById('reset').addEventListener('click',function(){
     fontSize = 16;
     display.style.fontSize = fontSize + "px";
 })
+
+document.getElementById('clear').addEventListener('click',function(){
+    input.value="";
+    display.innerHTML="";
+})

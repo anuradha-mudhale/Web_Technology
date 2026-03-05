@@ -1,7 +1,7 @@
 //single ton objects -->automatic create constructor
 const user = new Object;
 console.log(user);
-user.name="Ankita";
+user.name="Anuradha";
 console.log(user)
 
 

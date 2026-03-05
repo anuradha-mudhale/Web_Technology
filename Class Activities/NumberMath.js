@@ -13,7 +13,7 @@ console.log(h.toLocaleString('en-IN'))//by indian format
 //Math
 console.log(Math.abs(-4)) //negative value converts positive posite will be positive
 console.log(Math)
-console.log(Math.round(4.6))
+console.log(Math.round(4.6))//convert the value to nearest whole number
 console.log(Math.ceil(4.6))//choose top value
 console.log(Math.floor(4.6))//choose lowest value
 console.log(Math.min(1,2,3,4,5))

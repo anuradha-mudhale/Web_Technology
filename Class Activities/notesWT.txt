@@ -183,3 +183,36 @@ The unary plus operator converts values into numbers. Post-increment increases t
 
 What is DOM
 DOM is a programming interface that represents a web page as a tree of objects, allowing scripts to access and manipulate HTML elements dynamically.
+
+
+1.create one file
+dom manipulation -> dom manipulation means changing html by using JavaScript 
+eg,show error msg,display success msg,clear input field,change color
+.value ->to get input from user
+.innerHTML -> change content
+html can create form but cannot create think js makes forms smart
+form validation->checking user inputs before sending data to server
+
+//build a tiny http server return hello msg and current date and time
+
+node js ->
+npm is a tool which to install packages/library for the nodejs
+
+every node project uses package.json to manage dependencies
+
+
+Sync js->code execute line by line
+each task waits to prvious task to finish
+blocking in nature
+
+js is a single threaded and by default Synchronous
+
+Async js->Some task take time like api call,file read,data
+js does not wait it moves to next line not blocking behaviour
+fetching data from server ,reading file,setTimeout,api calls
+eg:
+console.log(start);
+setTimeout(()=>{
+       
+})
+

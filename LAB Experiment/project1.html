@@ -3,18 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mini Text Editor</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        #display {
+            margin-top: 15px;
+            padding: 15px;
+            min-height: 40px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            font-size: 18px;
+        }
+
+        button {
+            padding: 8px 12px;
+            margin: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #Red {
+            background-color: red;
+        }
+
+        #Red:hover {
+            background-color: darkred;
+        }
+
+        #reset {
+            background-color: gray;
+        }
+
+        #reset:hover {
+            background-color: #555;
+        }
+    </style>
 </head>
+
 <body>
     <h1>Mini Text Editor</h1>
-    Enter Text<input type="text" id ="text">
+
+    Enter Text
+    <input type="text" id="text">
+
     <p id="display"></p>
+
     <button id="bold">Bold</button>
-    <button id="italic">italic</button>
+    <button id="italic">Italic</button>
     <button id="Red">Red color</button>
-    <button id="increase">increase Font</button>
-    <button id="decrease">decrease Font</button>
+    <button id="increase">Increase Font</button>
+    <button id="decrease">Decrease Font</button>
     <button id="reset">Reset</button>
+    <button id="clear">clear</button>
+
     <script src="./project1.js"></script>
 </body>
 </html>
