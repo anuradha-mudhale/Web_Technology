@@ -1,0 +1,155 @@
+body {
+  background: #f5f7ff;
+  font-family: Arial, sans-serif;
+  padding-top: 90px;
+}
+
+/* Navbar */
+.custom-navbar {
+  background: linear-gradient(90deg, #4e54c8, #8f94fb);
+  padding: 12px 0;
+}
+
+.navbar-brand {
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+  color: white !important;
+}
+
+.navbar-nav .nav-link {
+  color: white !important;
+  font-weight: 500;
+  margin-left: 10px;
+  border-radius: 8px;
+  padding: 8px 14px !important;
+  transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffd43b !important;
+}
+
+.navbar-nav .nav-link.active {
+  background-color: white;
+  color: #4e54c8 !important;
+  font-weight: 600;
+}
+
+.logout-btn {
+  background-color: #ff4d6d;
+  color: white !important;
+  border-radius: 8px;
+  padding: 8px 14px !important;
+}
+
+.logout-btn:hover {
+  background-color: #e63956;
+  color: #fff !important;
+}
+
+/* Dashboard */
+.dashboard-section {
+  padding: 30px 0;
+}
+
+.dashboard-header {
+  margin-bottom: 30px;
+}
+
+.dashboard-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d2d2d;
+}
+
+.dashboard-subtitle {
+  color: #6c757d;
+  margin-top: 8px;
+}
+
+.dashboard-card {
+  border-radius: 18px;
+  padding: 25px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 150px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+}
+
+.dashboard-card h5 {
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+}
+
+.dashboard-card h2 {
+  font-size: 2.2rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+.card-icon {
+  font-size: 2.6rem;
+}
+
+.total-books-card {
+  background: linear-gradient(135deg, #36d1dc, #5b86e5);
+}
+
+.issued-books-card {
+  background: linear-gradient(135deg, #ff9966, #ff5e62);
+}
+
+.available-books-card {
+  background: linear-gradient(135deg, #56ab2f, #a8e063);
+}
+
+.members-card {
+  background: linear-gradient(135deg, #7f00ff, #e100ff);
+}
+
+.info-box {
+  background: white;
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  height: 100%;
+}
+
+.info-box h4 {
+  color: #4e54c8;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.info-box p {
+  color: #555;
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+.quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.quick-btn {
+  background: #4e54c8;
+  color: white;
+  border-radius: 10px;
+  padding: 10px 16px;
+  border: none;
+}
+
+.quick-btn:hover {
+  background: #3940a0;
+  color: white;
+}
