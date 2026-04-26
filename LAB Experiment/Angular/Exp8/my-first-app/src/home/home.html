@@ -1,0 +1,38 @@
+<h1>Student Details</h1>
+<p>Interpolation: one way data binding</p>
+
+<p>Name: {{ student.name }}</p>
+<p>Age: {{ student.age }}</p>
+<p>Course: {{ student.course }}</p>
+
+<hr>
+
+<h1>Student Update</h1>
+<p>Call function on event</p>
+
+<label>Name:</label>
+<input type="text" [(ngModel)]="newStudent.name"><br><br>
+
+<label>Age:</label>
+<input type="number" [(ngModel)]="newStudent.age"><br><br>
+
+<label>Course:</label>
+<input type="text" [(ngModel)]="newStudent.course"><br><br>
+
+<button (click)="updateStudent()">Update Student</button>
+
+<hr>
+<h1>Image</h1>
+<h3>Property binding</h3>
+<img [src]="imgUrl">
+<hr>
+<h1>List of Couse Available</h1>
+
+
+<ul>
+  @for (c of courses; track c) {
+    <li>{{ c }}</li>
+  }
+</ul>
+<hr>
+
