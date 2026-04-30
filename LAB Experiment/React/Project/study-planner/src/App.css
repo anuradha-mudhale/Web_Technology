@@ -1,0 +1,180 @@
+/* Reset */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to right, #eef2f3, #dfe9f3);
+  min-height: 100vh;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* logo | links */
+  align-items: center;
+  padding: 16px 40px;
+  background: linear-gradient(to right, #4f46e5, #6366f1);
+  color: white;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 40px;   /* Home आणि Study Planner मध्ये अंतर */
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  padding: 6px 12px;  /* प्रत्येक link ला padding */
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.navbar-links a:hover {
+  background: rgba(255,255,255,0.2);
+  color: #e0e7ff;
+}
+
+.navbar-links a.active {
+  background: rgba(255,255,255,0.3);
+  color: #e0e7ff;
+  font-weight: 600;
+}
+
+
+/* HERO SECTION */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px;
+  margin: 30px auto;
+  max-width: 1100px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+.hero-left img { width: 350px; max-width: 100%; }
+.hero-right { max-width: 500px; }
+.hero-right h1 { font-size: 32px; margin-bottom: 10px; }
+.hero-right span { color: #4f46e5; }
+.hero-right p { color: #555; margin-bottom: 20px; }
+.hero-right button { padding: 12px 20px; border-radius: 8px; border: none; background: linear-gradient(to right, #4f46e5, #6366f1); color: white; font-weight: 600; cursor: pointer; transition: 0.3s; }
+.hero-right button:hover { transform: scale(1.05); }
+
+/* Planner Page */
+.page { padding: 40px; }
+.planner-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+.panel {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.2s;
+}
+.panel:hover { transform: translateY(-3px); }
+.panel h3 { margin-bottom: 15px; color: #333; font-size: 18px; font-weight: 600; }
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+}
+input:focus { border-color: #4f46e5; box-shadow: 0 0 0 3px rgba(79,70,229,0.2); }
+
+/* Buttons */
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(to right, #4f46e5, #6366f1);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover { transform: scale(1.03); }
+
+/* Task List */
+ul { list-style: none; padding: 0; margin-top: 10px; }
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8fafc;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  transition: background 0.2s;
+}
+li:hover { background: #eef2ff; }
+li.done { text-decoration: line-through; color: gray; }
+li button { background: transparent; color: #ef4444; width: auto; padding: 5px; font-size: 16px; }
+
+/* Progress Box */
+.progress-box {
+  text-align: center;
+  padding: 20px;
+  background: #f9fafb;
+  border-radius: 12px;
+}
+
+/* Animated Circle Progress */
+.circle {
+  --progress: 0; /* default */
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: conic-gradient(#4f46e5 calc(var(--progress) * 1%), #e5e7eb 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px auto;
+  font-weight: bold;
+  font-size: 22px;
+  color: #333;
+  transition: background 1s ease;
+}
+
+/* Empty state */
+.panel p { text-align: center; color: gray; margin-top: 20px; }
+
+/* Responsive */
+@media (max-width: 992px) {
+  .planner-container { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .hero { flex-direction: column; text-align: center; padding: 40px 20px; }
+  .hero-left img { width: 250px; margin-bottom: 20px; }
+  .navbar { flex-direction: column; align-items: flex-start; padding: 20px; }
+  .navbar ul { flex-direction: column; gap: 15px; margin-top: 15px; }
+}
+
+.circle {
+  --progress: 0;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: conic-gradient(#4f46e5 calc(var(--progress) * 1%), #e5e7eb 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px auto;
+  font-weight: bold;
+  font-size: 22px;
+  color: #333;
+  transition: background 1s ease;
+}

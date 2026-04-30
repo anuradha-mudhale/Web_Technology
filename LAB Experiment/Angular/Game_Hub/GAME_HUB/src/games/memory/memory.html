@@ -1,0 +1,27 @@
+<h2>🧠 Memory Game</h2>
+
+<p>Moves: {{moves}}</p>
+
+<div class="grid">
+  @for (card of cards; track card.id) {
+    <div class="card" (click)="flipCard(card)">
+
+      <div class="inner" [class.flipped]="card.flipped || card.matched">
+
+        <div class="front">❓</div>
+
+        <div class="back">
+          {{card.icon}}
+        </div>
+
+      </div>
+
+    </div>
+  }
+</div>
+
+@if (isGameWon()) {
+  <h3>🎉 You Won!</h3>
+}
+
+<button (click)="restartGame()">Restart</button>
