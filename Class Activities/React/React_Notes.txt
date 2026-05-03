@@ -1,0 +1,248 @@
+React is javaScript library developed by meta to build fast and interactive User interface.
+It is a single page application(SPA) page does not reload only content change.
+Example - Instagram , Facebook
+
+
+Why do we use react ?
+Answer ->
+Problem with traditional js - fully page reload, complex dom manipulation, hard to manage large applications.
+by using react - updates only required parts, use reusable components
+
+we write everything html, css, js in only one file do not need to write different files
+
+Core concept 
+virtual DOM --> 
+- React creates a copy of real DOM means virtual DOM
+- When data changes react updates virtual DOM, updates only changed part in real DOM
+- used for high performance
+
+How can we create project in React 
+1. open folder
+2. terminal - new terminal
+3. command - node -v (check version)
+4. command - npm -v (check version)
+5. command - for creating react application --> npm create vite@latest app_name
+ // npx create react app appName - old 
+
+##
+vite --> fast build tool 
+npm install -->  install dependancy 
+npm run dev ---> start server
+
+**jsx**
+jsx --> jsx means javScript + xml , it allows us to write html code inside the JavaScript
+#Syntax --> Example -
+const element = <h1> Hello React </h1>
+
+**Rules for jsx**
+- must return single parent 
+- use {} scope brackets for javaScript
+
+**Files**
+index.html - render everything in this file (main file)
+main.jsx - It is entry point of react application
+App - root function/component
+
+**Component**
+Component is a heart of react 
+1. Functional Component - 
+    Example - 
+    function student(){
+        return <h1>This is functional component </h1>
+    }
+
+**How to use component **
+    function App(){
+        return <>
+                <student/>
+                </>
+    }
+
+
+
+**Props**
+- props means data passing from parent to child 
+    //props -- parent
+    function App(){
+        return <student name = 'Siddhi'/>
+    }
+
+    //child 
+    function student(props){
+        return <h2>Name : {props.name} </h2>
+    }
+
+
+Activity 
+1. What is difference between angular and react ?
+2. Which one is more popular ?
+3. Why react library is created ?
+4. <></> -- why used and what is this called ?
+5. What component and types of components, where we use componenets in react with 2 examples 
+6. What is props , why we use props and types of props with 2 examples
+1.class componenet old
+2.functional components new
+
+
+Ans->
+1. Difference between Angular and React
+Feature	Angular	React
+Type	Full framework	UI library
+Developed by	Google	Facebook (Meta)
+Language	TypeScript	JavaScript
+Learning curve	Hard (more concepts)	Easy (focused on UI)
+Architecture	MVC / full structure	Component-based
+Data binding	Two-way binding	One-way binding
+Flexibility	Less flexible	More flexible
+
+👉 Simple meaning:
+Angular is a complete package (framework), React is only for building UI (library).
+
+2. Which one is more popular?
+
+👉 React is more popular than Angular currently.
+
+Why React is more popular:
+Easy to learn
+Large community support
+Used in many companies (Meta, Netflix, Airbnb)
+Flexible and fast development
+Huge job demand
+3. Why React library is created?
+
+React was created to solve problems in building complex user interfaces.
+
+Main reasons:
+To make UI development faster and reusable
+To handle large data changes efficiently
+To avoid reloading whole page (uses Virtual DOM)
+To create component-based architecture
+To improve performance in web apps
+
+👉 Example: Facebook needed fast UI updates without reloading page → React was created.
+
+4. What is <></> and why is it used?
+
+👉 This is called React Fragment.
+
+Meaning:
+
+It is used to wrap multiple elements without adding extra HTML element (like <div>).
+
+Why used:
+Avoid unnecessary extra DOM nodes
+Cleaner and faster rendering
+Example:
+return (
+  <>
+    <h1>Hello</h1>
+    <p>Welcome</p>
+  </>
+);
+
+👉 Without fragment, we would need an extra <div>.
+
+5. What is Component? Types of Components + Examples
+👉 Component:
+
+A component is a small reusable building block of UI in React.
+
+Types of Components:
+1. Functional Component
+Simple JavaScript function
+Most commonly used
+Example 1:
+function Hello() {
+  return <h1>Hello World</h1>;
+}
+2. Class Component
+Uses ES6 class
+Has state and lifecycle methods
+Example 2:
+class Hello extends React.Component {
+  render() {
+    return <h1>Hello World</h1>;
+  }
+}
+Where we use components in React?
+Login page
+Navbar
+Product card
+Footer
+
+👉 Example:
+
+Navbar component
+ProductList component
+6. What is Props? Why we use Props? Types of Props + Examples
+👉 Props (Properties):
+
+Props are used to pass data from one component to another (parent to child).
+
+Why we use Props:
+To make components reusable
+To pass dynamic data
+To communicate between components
+Types of Props:
+1. String Props
+2. Number / Object Props
+Example 1 (String Props):
+function Student(props) {
+  return <h1>Name: {props.name}</h1>;
+}
+
+// Usage
+<Student name="Anuradha" />
+Example 2 (Object Props):
+function Student(props) {
+  return (
+    <div>
+      <h1>Name: {props.data.name}</h1>
+      <h2>Age: {props.data.age}</h2>
+    </div>
+  );
+}
+
+// Usage
+<Student data={{ name: "Anuradha", age: 20 }} />
+
+
+--------------------22/04/26-------------
+
+state means data that can change value changes over time with state changes UI update automatically
+
+without state :
+ value will not update on screen
+
+with state :
+ UI update Automatically
+
+
+-----------23/04/26-----
+
+React Routing:
+React Routing means navigating between different pages (components) in a React application without reloading the whole page.
+
+👉 In simple words:
+It allows you to create multi-page experience in a single-page application (SPA).
+
+📦 Which library is used?
+
+We use:
+
+react-router-dom
+🧭 Why React Routing is used?
+To move between pages like Home, About, Contact
+No page reload (fast navigation)
+Better user experience
+Used in SPAs (Single Page Applications)
+🏗️ Basic Components of React Router
+1. BrowserRouter
+Wraps the whole application
+Enables routing
+2. Routes
+Contains all route paths
+3. Route
+Defines path and component
+4. Link
+Used to navigate between pages (like <a> tag but without reload)

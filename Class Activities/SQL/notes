@@ -1,0 +1,21 @@
+WebSocket:
+    http
+    client->server->connection close 
+so avoid this use websocket
+    client->sever->permenant connection
+
+What is ORM:
+instead of writing sql queries we use javascript object
+1]select * from student ->not use
+use->
+student.findAll()
+
+websocket allows us real time communicaion 
+HTTP->req,res
+websocket->continuous connection
+real time example->chatApps ,WhatsApp,live Stock price updates,online gaming,notification 
+if we install websocket in our project->npm install ws
+
+Activities
+1.deep study concept
+2.with one example

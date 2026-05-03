@@ -1,0 +1,64 @@
+<h1>Activity 1: Hide And Show Button</h1>
+<hr>
+@if(isVisible)
+{
+     <div style="width:100%; height:250px; background-color:rgb(31, 172, 253); border:2px solid black; color:rgb(15, 14, 14); display:flex; border-radius: 5px;">
+     </div>
+}@else{ 
+
+}
+<br>
+<div class="btn">
+<button (click)="showDiv()">Show</button>
+<button (click)="hideDiv()">Hide</button>
+</div>
+<hr>
+<h1>Activity 2: Toggle Color Activity</h1>
+<hr>
+<div style="width:100%; height:250px; border:2px solid black; color:white; display:flex; align-items:center; justify-content:center;" [style.background-color]="isPink ? 'pink' : 'purple'">
+</div>
+<br>
+<button (click)="toggleColor()">Toggle Color</button>
+<hr>
+<h1>Activity 3: Number Comparison</h1>
+@if(num1===num2)
+{
+    <div style="width:100%; height:250px; background-color:purple; border:2px solid black; color:rgb(15, 14, 14); display:flex; border-radius: 5px; justify-content: center; align-items: center;">
+        <h2>The numbers are equal !!</h2>
+    </div>
+}@else{
+
+}
+<br>
+<input type="number" placeholder="Enter num1" [(ngModel)]="num1"><br>
+<input type="number" placeholder="Enter num2" [(ngModel)]="num2"><br>
+<hr>
+<h1>Activity 4: Select Course</h1>
+<hr>
+<div style="width:100%; height:250px; background-color:rgb(231, 255, 192); border:2px solid black; color:rgb(15, 14, 14); display:flex; border-radius: 5px; justify-content: center; align-items: center;">
+@if(selectedCourse){
+    selected Course:{{selectedCourse}}
+}@else{
+    please select course
+}
+</div>
+<br>
+<select [(ngModel)]="selectedCourse">
+  <option value="">Select course</option>
+
+  @for(c of courses; track c;){
+    <option [value]="c">{{c}}</option>
+  }
+
+</select>
+<hr>
+  <hr>
+  <h2>Service activity 1: Student List</h2>
+
+  <ul>
+    <li *ngFor="let s of students">
+      {{ s.name }}
+    </li>
+  </ul>
+
+  <hr>

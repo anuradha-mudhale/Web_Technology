@@ -1,0 +1,19 @@
+<p>home works!</p>
+{{fname}}
+{{myRoll}}
+{{course}}
+<button (click)="showButton"></button>
+<!--Two way binding-->
+<input [(ngModel)]="fname" placeholder="Enter Name">
+<br>
+<input [(ngModel)]="myRoll" placeholder="Enter Rollno">
+<br>
+<input [(ngModel)]="course" placeholder="Entercourse">
+<br>
+<ul>
+    @for(item of cityArr; track $index)
+    <li>{{item}}</li>
+</ul>
+
+
+

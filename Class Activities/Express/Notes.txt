@@ -1,0 +1,355 @@
+Express is a minimal and flexible web application framework for nodejs that simplifies the development of web server and apis
+it provides feature such as routing, middleware support, request and response handling, template rendering, rest api creation.
+
+nodejs is limited for small applications so to build large application we use express.js framework
+
+
+Routing in express:
+    Routing refers to determining how an application respond to client request for specific url and http methods
+component:
+1.url path
+2.http methods
+3.handler function
+
+  -------//------Activity------//------
+
+1.difference between package.json and package-lock.json
+
+--->“When we run npm init, a package.json file is created. It stores basic information about the 
+project such as name, version, description, main file, and scripts. Essentially, it keeps the metadata of the project.
+When we run npm install express, a package-lock.json file is automatically created. It locks the exact versions of all installed dependencies, including sub-dependencies, and provides detailed information about them. 
+This ensures that everyone working on the project uses the same versions of packages.”
+
+
+2.differene between dependancies and dev-dependancies
+
+--->dependencies are packages that the app needs to run, like express for server, mongoose for database, or react for frontend.
+devDependencies are packages we use only while developing, like nodemon to auto-restart the server, eslint for checking code, 
+or jest for testing. So basically, dependencies are for production, devDependencies are for development.
+
+3.add code to the routes
+---> eg:app.get('/contact',(req,res)=>{
+    
+    const info={
+        name:"Anuradha",
+        age:20,
+        contactNo:8275677225
+    }
+    res.json(info)
+})
+
+4.types of routing
+
+--->“In Express.js, routing is how we define how the server responds to client requests at different URLs. 
+There are mainly four types of routing.”
+
+1.Basic Routing – Fixed URLs that return a response.
+Example: app.get('/home', (req, res) => res.send('Home Page'));
+2.Route Parameters – Dynamic URLs with variables.
+Example: app.get('/user/:id', (req, res) => res.send(req.params.id));
+3.Query Strings – Optional data sent in URL using ?key=value.
+Example: /search?term=books → req.query.term
+4.Express Router (Modular Routing) – Organizing routes in separate files for cleaner code.
+Example: const router = express.Router(); router.get('/', ...)
+
+***.env file consists all port number effiecient way company level
+
+5. get,post,put,delete,patch difference
+
+1️⃣ GET
+Purpose: To read/fetch data from the server.
+Does it change data? ❌ No, it’s safe.
+Example: Get all users from database.
+app.get('/users', (req, res) => {
+    res.send("Fetching all users");
+});
+URL example: /users
+
+✅ Use case: Displaying data, like home page, profile, product list.
+
+2️⃣ POST
+Purpose: To create new data on the server.
+Does it change data? ✅ Yes, it adds new data.
+Example: Add a new user.
+app.post('/users', (req, res) => {
+    const newUser = req.body; // data sent from client
+    res.send(`User created: ${newUser.name}`);
+});
+URL example: /users
+Body: { "name": "Anuradha", "age": 20 }
+
+✅ Use case: Signup forms, adding products, submitting forms.
+
+3️⃣ PUT
+Purpose: To update/replace a full existing resource.
+Does it change data? ✅ Yes.
+Example: Update a user completely.
+app.put('/users/:id', (req, res) => {
+    res.send(`User ${req.params.id} updated completely`);
+});
+URL example: /users/101
+Body: { "name": "Anuradha", "age": 21 }
+
+✅ Use case: Replace the entire record with new data.
+
+4️⃣ PATCH
+Purpose: To update/modify part of a resource.
+Does it change data? ✅ Yes.
+Example: Update only age of a user.
+app.patch('/users/:id', (req, res) => {
+    res.send(`User ${req.params.id} updated partially`);
+});
+URL example: /users/101
+Body: { "age": 22 }
+
+✅ Use case: Partial updates, like changing password, updating profile picture.
+
+5️⃣ DELETE
+Purpose: To delete a resource from the server.
+Does it change data? ✅ Yes.
+Example: Delete a user.
+app.delete('/users/:id', (req, res) => {
+    res.send(`User ${req.params.id} deleted`);
+});
+URL example: /users/101
+
+✅ Use case: Removing items, accounts, posts, etc.
+
+💡 Quick Memory Tip (Fresher friendly):
+GET → Grab/fetch
+POST → Push/create
+PUT → Replace/Update whole
+PATCH → Partial update
+DELETE → Remove
+/---------middleware in Express js--------/
+
+middleware is a function that execute during request before sending the final response they have access to 
+request,response and next
+
+client ---> middleware ---> server
+
+//------Activity-----//
+1.why we use middleware
+2.what is the types of middleware
+3.what are the benefits
+4.where we use middleware function in company levels
+
+ans->
+Why do we use middleware in Express.js?
+
+Middleware functions are used to process requests before they reach the final route handler or before sending the response.
+
+They act as a bridge between the request and response cycle.
+
+Common purposes:
+Authentication (checking user login)
+Validation (checking input data)
+Logging (tracking requests)
+Modifying request/response
+
+👉 Interview answer:
+
+Middleware is used to handle and process requests before they reach the route handler, enabling tasks like authentication, validation, logging, and data transformation.
+
+2️⃣ Types of middleware in Express.js
+1. Application-level middleware
+
+Used for the entire app or specific routes.
+
+app.use((req, res, next) => {
+  console.log("App middleware");
+  next();
+});
+2. Router-level middleware
+
+Used for specific routers.
+
+router.use((req, res, next) => {
+  console.log("Router middleware");
+  next();
+});
+3. Built-in middleware
+
+Provided by Express.
+
+app.use(express.json());
+4. Error-handling middleware
+
+Handles errors in the app.
+
+app.use((err, req, res, next) => {
+  res.status(500).send("Error occurred");
+});
+5. Third-party middleware
+
+External packages like:
+
+cors
+morgan
+body-parser
+
+👉 Interview answer:
+
+The main types of middleware are application-level, router-level, built-in, error-handling, and third-party middleware.
+
+3️⃣ Benefits of middleware
+Code reusability – write once, use in multiple routes
+Clean architecture – separates logic (auth, validation, etc.)
+Security – handles authentication and authorization
+Centralized error handling
+Logging and debugging made easier
+Request filtering and control
+
+👉 Interview answer:
+
+Middleware improves code reusability, maintainability, security, and helps manage logging, validation, and error handling efficiently.
+
+4️⃣ Where is middleware used in companies?
+
+In real-world backend systems, middleware is used in many critical areas:
+
+🔐 Authentication & Authorization
+Checking JWT tokens
+Verifying user roles
+📊 Logging
+Recording API requests
+Monitoring user activity
+✅ Validation
+Validating form data (email, password, etc.)
+❌ Error handling
+Handling server and application errors
+🌐 CORS handling
+Managing cross-origin requests
+⚡ Rate limiting
+Preventing API abuse (e.g., too many requests)
+
+👉 Interview answer:
+
+In companies, middleware is widely used for authentication, logging, validation, error handling, CORS management, and rate limiting in backend applications.
+
+
+handling req,res-> Express application handles http req and res
+req---> the req object contain information about the client request
+examples-> url,headers,query parameter,req body
+
+---Activity----
+1.detail study on query parameter with 3 to 4 real time examples
+2.where we use in company level
+
+ans->
+What are Query Parameters?
+
+Query parameters are key-value pairs added to the URL after ? to send data from client to server.
+
+👉 Example URL:
+
+http://localhost:3000/products?category=mobile&price=10000
+
+👉 Here:
+
+category = mobile
+price = 10000
+🔹 How to access in Express.js?
+app.get('/products', (req, res) => {
+  const category = req.query.category;
+  const price = req.query.price;
+
+  res.send(`Category: ${category}, Price: ${price}`);
+});
+
+👉 req.query = object that stores all query parameters
+
+🔹 Key Features
+Optional (not mandatory)
+Used for filtering/searching
+Visible in URL
+Multiple parameters allowed
+2️⃣ Real-Time Examples (Important 🔥)
+✅ Example 1: Search functionality (E-commerce)
+GET /products?name=iphone
+
+👉 Use:
+
+Search products by name
+
+👉 Backend:
+
+app.get('/products', (req, res) => {
+  const name = req.query.name;
+  // filter products based on name
+});
+✅ Example 2: Filtering data
+GET /products?category=shoes&brand=nike
+
+👉 Use:
+
+Filter products by category + brand
+✅ Example 3: Pagination (very important)
+GET /users?page=2&limit=10
+
+👉 Use:
+
+Show 10 users per page
+Page 2 data fetch
+
+👉 Backend:
+
+const page = req.query.page;
+const limit = req.query.limit;
+✅ Example 4: Sorting
+GET /products?sort=price&order=asc
+
+👉 Use:
+
+Sort products by price (ascending/descending)
+3️⃣ Where Query Parameters are used in Companies?
+
+👉 Query parameters are heavily used in real-world applications 👇
+
+🔹 1. E-commerce websites
+Product filtering (price, category)
+Sorting (low to high)
+🔹 2. Social media apps
+Searching users/posts
+Feed filtering
+🔹 3. Admin dashboards
+Pagination (page, limit)
+Reports filtering
+🔹 4. APIs (Backend services)
+Data fetching with conditions
+Dynamic queries
+🔹 5. Analytics systems
+Filter data by date, type, etc.
+
+👉 Interview answer:
+
+In companies, query parameters are used in APIs for searching, filtering, sorting, pagination, and fetching dynamic data based on user input.
+
+
+
+package.json -> configuration file
+package-lock.json->configuration file detailed information
+
+
+response object ->the response object sends data 
+response.status()->check http status
+response.sendfiles()->
+
+import -->middleware--->routes
+
+Template engine->allow developers to create dynamic html page using data from the server
+instead of static html page are created dynamically
+eg->ejs embedded JavaScript
+pug->
+handlebars->
+why use->They help in dynamic content,code reusability,seperate logic from html
+eg using ejs
+1]npm install ejs
+
+
+--------Activity--------
+1.ejs exp by using notes
+2.static files 
+2.Express router
+3.complete express flow
+4.backend express use js
